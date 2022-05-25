@@ -20,3 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/diet', [App\Http\Controllers\HomeController::class, 'diet'])->name('diet');
+Route::get('/user', [App\Http\Controllers\HomeController::class, 'user'])->name('user');
+

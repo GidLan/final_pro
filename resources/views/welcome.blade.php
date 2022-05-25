@@ -69,7 +69,7 @@
                         <div class="row justify-content-start">
                             <div class="col-lg-7">
                                 <h1 class="display-2 mb-5 animated slideInDown">Proper nutrition to supliment
-                                    nutrition</h1>
+                                    medication</h1>
                                 <a href="#form" class="btn btn-primary rounded-pill py-sm-3 px-sm-5">Get started</a>
                             </div>
                         </div>
@@ -86,33 +86,34 @@
 <section id="form">
 
 
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                        <img class="img-fluid w-100" src="img/about.jpg">
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <h1 class="display-5 mb-4">Best Organic Fruits And Vegetables</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et
-                        eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat
-                        amet</p>
-                    <p><i class="fa fa-check text-primary me-3"></i>Tempor erat elitr rebum at clita</p>
-                    <p><i class="fa fa-check text-primary me-3"></i>Aliqu diam amet diam et eos</p>
-                    <p><i class="fa fa-check text-primary me-3"></i>Clita duo justo magna dolore erat amet</p>
-                    <a href="#nutrition" class="btn btn-primary rounded-pill py-3 px-5 mt-3">Get Nutrition</a>
-                </div>
-            </div>
-        </div>
+    <div class="container">
+        <form action="action_page.php">
+
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="country">Disease suffering from</label>
+            <select id="country" name="country">
+                <option value="australia">Cancer</option>
+                <option value="canada">Malaria</option>
+                <option value="usa">Cough</option>
+            </select>
+
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+
+        </form>
     </div>
 
 
 </section>
 <!-- About Start -->
 <!-- About End -->
-
 
 <!-- Feature Start -->
 <section id="nutrition">
@@ -785,9 +786,7 @@
     </div>
 
 </section>
-
 <!-- Feature End -->
-
 
 <!-- Footer Start -->
 <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -828,7 +827,6 @@
         <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
                 class="bi bi-arrow-up"></i></a>
 
-
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -839,6 +837,46 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+    </div>
+
+    <style>
+        /* Style inputs with type="text", select elements and textareas */
+        input[type=text], select, textarea {
+            width: 100%; /* Full width */
+            padding: 12px; /* Some padding */
+            border: 1px solid #ccc; /* Gray border */
+            border-radius: 4px; /* Rounded borders */
+            box-sizing: border-box; /* Make sure that padding and width stays in place */
+            margin-top: 6px; /* Add a top margin */
+            margin-bottom: 16px; /* Bottom margin */
+            resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+        }
+
+        /* Style the submit button with a specific background color etc */
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* When moving the mouse over the submit button, add a darker green color */
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        /* Add a background color and some padding around the form */
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+    </style>
+
+</div>
 </body>
 
 </html>
